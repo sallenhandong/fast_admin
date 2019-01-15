@@ -1,0 +1,85 @@
+<style>
+
+</style>
+<div id="content-container" class="container">
+    <div class="row">
+        <div class="col-md-3">
+            {include file="common/sidenav" /}
+        </div>
+        <div class="col-md-9">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h2 class="page-header">提交工时</h2>
+                    <form id="profile-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="{:url('api/user/commitHour')}">
+                        {:token()}
+
+                        <div class="form-group">
+                            <label class="control-label col-xs-12 col-sm-2">填写工时</label>
+                            <div class="col-xs-12 col-sm-4">
+                                <input type="text" class="form-control" id="username" name="username" value="" data-rule="required;" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="c-bio" class="control-label col-xs-12 col-sm-2">所属项目</label>
+                            <div class="col-xs-12 col-sm-8">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" aria-label="...">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">选择项目 <span class="caret"></span></button>
+                                            <ul class="dropdown-menu dropdown-menu-right">
+                                                <li><a href="#">IOS</a></li>
+                                                <li><a href="#">Android</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <div class="form-group">
+                            <label for="c-bio" class="control-label col-xs-12 col-sm-2">完成进度</label>
+                            <div class="col-xs-12 col-sm-8">
+                                <select class="selectpicker show-tick form-control" data-live-search="true">
+                                    <option>10%</option>
+                                    <option>20%</option>
+                                    <option>30%</option>
+                                    <option>40%</option>
+                                    <option>50%</option>
+                                    <option>60%</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-bio" class="control-label col-xs-12 col-sm-2">时间</label>
+                            <div class="col-xs-12 col-sm-8">
+                                <input id="c-birthday" data-rule="" class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-use-current="true" name="22" type="text" value="2018-09-09">
+
+                            </div>
+                            </div>
+
+                        <div class="form-group">
+                            <label for="c-bio" class="control-label col-xs-12 col-sm-2">工作内容</label>
+                            <div class="col-xs-12 col-sm-8">
+                                <textarea id="c-bio" data-rule="" data-tip="简短的语言概括一下" class="form-control" name="bio" type="text" value=""></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group normal-footer">
+                            <label class="control-label col-xs-12 col-sm-2"></label>
+                            <div class="col-xs-12 col-sm-8">
+                                <button type="submit" class="btn btn-success btn-embossed">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+
+
+</style>
